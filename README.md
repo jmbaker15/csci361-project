@@ -1,13 +1,11 @@
 # csci361-project
-a from scratch ftp client server application 
+a from scratch ftp client server application
 
-*********************************************************
 *	Joshua Baker
 *	10368442
 *	CSCI 361
 *	4/30/15
 *	Mini-Project
-*********************************************************
 
 this readme is a work in progress
 
