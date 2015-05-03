@@ -11,10 +11,9 @@ import java.io.*;
 import java.util.*;
 
 public class Client {
-
+System.out.println("Connect to host IP and port? : ");
 
 	public static void main(String... args) throws Exception 
-		System.out.println("Connect to host IP and port? : ");
 	{
 		if (args.length < 1) {
 	         System.out.println("Connect to host IP and port? : "); // prints when there is no input 
