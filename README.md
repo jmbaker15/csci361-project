@@ -30,14 +30,15 @@ Server.java
 
 Client.java
 
-	Client side of things, houses basic connection info. the server does most of the work
-	This program comapres the server responses with know good reponses and outputs based on the 
-	response. This program must be run after the server is running. 
+	Client side of things, houses basic connection info. the server does most of 
+	the work .This program comapres the server responses with know good reponses
+	and outputs based on the response. This program must be run after the server 
+	is running. 
 
 Operaton
 	
-	The client can send the the server user input based on what the user would like to do.
-	The user can view the contents of the current directory similar to ls -l
-	The user can change directories similar to cd
-	The user can send file and receive files to and from the server
-	The directory on the server in which to send or receive filse can be changed by the user
+	The client can send the the server user input based on what the user would 
+	like to do. The user can view the contents of the current directory similar
+	to ls -l The user can change directories similar to cd The user can send 
+	file and receive files to and from the server The directory on the server 
+	in which to send or receive filse can be changed by the user
