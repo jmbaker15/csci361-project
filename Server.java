@@ -55,7 +55,7 @@ class ServerThread extends Thread { //creates thread
 				return false;
 			}
 
-		} else if (username.compareTo("fweng") == 0) {//same as above for different user
+		} else if (username.compareTo("fwang") == 0) {//same as above for different user
 			if (password.compareTo("csci361") == 0) {
 				os.writeUTF("Connected");
 				return true;

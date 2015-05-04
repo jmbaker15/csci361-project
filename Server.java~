@@ -48,7 +48,7 @@ class ServerThread extends Thread { //creates thread
 	Boolean LogOn(String username, String password) throws Exception {
 		if (username.compareTo("jmbaker") == 0) { //hardcoded username
 			if (password.compareTo("8442") == 0) {//hardcoded pass
-				os.writeUTF("  ~Authentication successful~");//sends auth to client to print confirmation
+				os.writeUTF("Connected");//sends auth to client to print confirmation
 				return true;
 			} else {
 				os.writeUTF("Password incorrect");//pass incorrect
@@ -57,7 +57,7 @@ class ServerThread extends Thread { //creates thread
 
 		} else if (username.compareTo("fweng") == 0) {//same as above for different user
 			if (password.compareTo("csci361") == 0) {
-				os.writeUTF("  ~Authentication successful~");
+				os.writeUTF("Connected");
 				return true;
 			} else {
 				os.writeUTF("Password incorrect");
