@@ -86,11 +86,12 @@ class ClientThread {
 		os.writeUTF(filename);
 
 		String msgFromServer = is.readUTF();
-		if (msgFromServer.compareTo("File already exists") == 0) {
+		if (msgFromServer.compareTo("File already exists") == 0) { //compares the message from the server to 
+									   //what we know to be good
 			String Option;
-			System.out.println("File already exists. Want to OverWrite (Y/N) ?");
+			System.out.println("File already exists. Overwrite (Y/N) ?");//the file aready exists
 			Option = br.readLine();
-			if (Option == "Y") {
+			if (Option == "Y") {//over wirte yes or no
 				os.writeUTF("Y");
 			} else {
 				os.writeUTF("N");
@@ -98,7 +99,7 @@ class ClientThread {
 			}
 		}
 
-		System.out.println("Sending File ...");
+		System.out.println("Sending File ...");//sending file dialog and progress
 		FileInputStream fin = new FileInputStream(f);
 		int ch;
 		do {
@@ -112,12 +113,12 @@ class ClientThread {
 
 	void ReceiveFile() throws Exception {
 		String fileName;
-		System.out.print("Enter File Name :");
+		System.out.print("Enter File Name :");//file to send
 		fileName = br.readLine();
 		os.writeUTF(fileName);
 		String msgFromServer = is.readUTF();
 
-		if (msgFromServer.compareTo("File Not Found") == 0) {
+		if (msgFromServer.compareTo("File Not Found") == 0) {//not found file DNE
 			System.out.println("File not found on Server ...");
 			return;
 		} else if (msgFromServer.compareTo("READY") == 0) {
@@ -125,7 +126,7 @@ class ClientThread {
 			File f = new File(fileName);
 			if (f.exists()) {
 				String Option;
-				System.out.println("File Already Exists. Want to OverWrite (Y/N) ?");
+				System.out.println("File Already Exists. OverWrite (Y/N) ?");//over write file?
 				Option = br.readLine();
 				if (Option == "N") {
 					os.flush();
